@@ -8,6 +8,7 @@ import java.util.List;
 public interface PhoneController {
 
     String findAllPhone(String phoneName,Model model);
+
     String create(Phone phone, Model model);
 
 

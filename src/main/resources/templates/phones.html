@@ -16,12 +16,15 @@
 <h1 style="text-align: center" class="my-2">Phones list</h1>
 <div class="form-group col-mb-6">
 
+
     <form method="get" action="/phones">
         <input type="text" name="phoneName" class="form-control"
                placeholder="Search By phoneName">
         <button type="submit" class="btn btn-primary ml-2 my-3">Search</button>
 
+
     </form>
+
 </div>
 </div>
 <table class="table table-dark table-sm" style="text-align: center">
@@ -29,39 +32,21 @@
         <th>NAME</th>
         <th>PRICE</th>
         <th>DESCRIPTION</th>
-        <th>STATUS</tr>
+
     </tr>
     <tr th:each="phone : ${phones}">
         <td th:text="${phone.name}">Onions</td>
+
         <td th:text="${phone.price}">Onions</td>
         <td th:text="${phone.description}">Onions</td>
-        <td th:text="${phone.status}">Onions</td>
     </tr>
 </table>
 
-<form class="form-group my-4 mx-2" action="/create" method="post"  enctype="multipart/form-data">
-<p>
-    <label>
-        BookName: <input type="text" name="name" placeholder="Press Phone Name">
-    </label>
-</p>
-<p>
-    <label >
-        BookAuthor: <input type="number" name="price" placeholder="Press price">
-    </label>
-</p>
-<p>
-    <label >
-        BookNumbersOfPage: <input type="text" name="description"placeholder="Input description">
-    </label>
-</p>
-<p>
-    <label >
-        Date: <input type="checkbox" name="status" placeholder="Press status">
-    </label>
-</p>
-<button class="btn btn-primary mt-2"  type="submit">Create New Book</button>
-</form>
+<th:block th:if="${#authorization.getAuthentication().getPrincipal().getRole().getAuthority() == 'Admin'}">
+    <form class="form-group my-4 mx-2" action="/create" method="get"  >
+        <button class="btn btn-primary mt-2"  type="submit">Create New Book</button>
+    </form>
+</th:block>
 
 </body>
 

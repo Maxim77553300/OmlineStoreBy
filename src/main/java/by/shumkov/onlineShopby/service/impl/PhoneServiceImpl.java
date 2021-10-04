@@ -15,6 +15,7 @@ import java.util.Optional;
 public class PhoneServiceImpl implements PhoneService {
     private PhoneRepository phoneRepository;
 
+
     @Autowired // spring сам сюда подставит объекты PhoneService
     public PhoneServiceImpl(PhoneRepository phoneRepository) {
         this.phoneRepository = phoneRepository;

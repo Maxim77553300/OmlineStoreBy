@@ -5,22 +5,21 @@ import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
 
 @Entity//помечаем класс-сущность
-@Table(name = "Phone")// название таблицы//необязательно
+@Table(name = "phone")// название таблицы//необязательно
 public class Phone {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")//название столбца//необязательно
     private Integer id;
-    @Column(name = "name")
     @NotBlank
+    private String brand;
+    @Column(name = "description")
+    private String description;
+    @Column( name = "name")
     private String name;
     @Min(1)
     @Column(name = "price")
     private Integer price;
-    @Column(name = "description")
-    private String description;
-    @Column(name = "status")
-    private boolean status;
 
 
     public Integer getId() {
@@ -29,6 +28,22 @@ public class Phone {
 
     public void setId(Integer id) {
         this.id = id;
+    }
+
+    public String getBrand() {
+        return brand;
+    }
+
+    public void setBrand(String brand) {
+        this.brand = brand;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     public String getName() {
@@ -47,30 +62,4 @@ public class Phone {
         this.price = price;
     }
 
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    public boolean isStatus() {
-        return status;
-    }
-
-    public void setStatus(boolean status) {
-        this.status = status;
-    }
-
-    @Override
-    public String toString() {
-        return "Phone{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", price=" + price +
-                ", description='" + description + '\'' +
-                ", status=" + status +
-                '}';
-    }
 }
