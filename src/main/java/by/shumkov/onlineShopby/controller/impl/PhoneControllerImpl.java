@@ -70,7 +70,7 @@ public class PhoneControllerImpl implements PhoneController {
     }
 
 
-    @PreAuthorize("hasAuthority('Admin')")
+    //@PreAuthorize("hasAuthority('Admin')")
     @GetMapping("/newPhone")
     public String forwardCreatePhone(@AuthenticationPrincipal User user){
         return "createNewPhone";
