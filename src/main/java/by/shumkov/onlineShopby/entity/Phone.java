@@ -20,7 +20,16 @@ public class Phone {
     @Min(1)
     @Column(name = "price")
     private Integer price;
+    @Column(name = "image")
+    private String image;
 
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
+    }
 
     public Integer getId() {
         return id;

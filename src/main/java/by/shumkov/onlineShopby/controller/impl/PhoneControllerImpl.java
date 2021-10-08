@@ -71,7 +71,7 @@ public class PhoneControllerImpl implements PhoneController {
 
 
     //@PreAuthorize("hasAuthority('Admin')")
-    @GetMapping("/newPhone")
+    @GetMapping("/create")
     public String forwardCreatePhone(@AuthenticationPrincipal User user){
         return "createNewPhone";
     }
