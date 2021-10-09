@@ -1,7 +1,6 @@
 package by.shumkov.onlineShopby.entity;
 
 
-import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
@@ -52,7 +51,7 @@ public class User implements UserDetails {
         this.role = role;
     }
 
-    @PreAuthorize("hasAuthority('Admin')")
+
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
 

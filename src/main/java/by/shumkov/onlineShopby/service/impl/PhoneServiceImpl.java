@@ -25,7 +25,7 @@ public class PhoneServiceImpl implements PhoneService {
     //поиск всех тел
     @Override
     public List<Phone> findAllPhone(String phoneName) {
-        if(isStringEqualNullOrBlank(phoneName)){
+        if (isStringEqualNullOrBlank(phoneName)) {
             return phoneRepository.findAll();
         }
         String redactedName = "%" + phoneName + "%";
@@ -41,7 +41,7 @@ public class PhoneServiceImpl implements PhoneService {
     @Override
     public Phone addNewPhone(Phone phone) throws PhoneServiceException {
         Optional<Phone> findPhone = phoneRepository.findPhoneByName(phone.getName());
-        if(findPhone.isPresent()){
+        if (findPhone.isPresent()) {
             throw new PhoneServiceException(PhoneServiceConstant.PHONE_NAME_IS_TEXT_EXCEPTION);
         } else {
             return phoneRepository.save(phone);
@@ -49,8 +49,8 @@ public class PhoneServiceImpl implements PhoneService {
 
     }
 
-    private boolean isStringEqualNullOrBlank(String text){
-        return text == null||text.isEmpty();
+    private boolean isStringEqualNullOrBlank(String text) {
+        return text == null || text.isEmpty();
     }
 
 

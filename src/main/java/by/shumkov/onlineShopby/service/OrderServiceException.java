@@ -1,6 +1,6 @@
 package by.shumkov.onlineShopby.service;
 
-public class OrderServiceException extends Exception{
+public class OrderServiceException extends Exception {
 
     public OrderServiceException() {
     }

@@ -7,7 +7,6 @@ import org.springframework.ui.Model;
 public interface OrderController {
 
     String showOrder(User user, Model model);
-
     String createOrder(User user, Phone phone, Model model);
 
 }

@@ -1,6 +1,6 @@
 package by.shumkov.onlineShopby.service;
 
-public class PhoneServiceException extends Exception{
+public class PhoneServiceException extends Exception {
 
     public PhoneServiceException() {
     }

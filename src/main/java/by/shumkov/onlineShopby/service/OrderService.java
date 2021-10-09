@@ -1,7 +1,7 @@
-package by.shumkov.onlineShopby.service;
-
-import by.shumkov.onlineShopby.entity.Order;
-import by.shumkov.onlineShopby.entity.Phone;
+//package by.shumkov.onlineShopby.service;
+//
+//import by.shumkov.onlineShopby.entity.Order;
+//import by.shumkov.onlineShopby.entity.Phone;
 //import by.shumkov.onlineShopby.entity.User;
 //
 //import java.util.List;

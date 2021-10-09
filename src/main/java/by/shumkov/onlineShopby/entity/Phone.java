@@ -15,7 +15,7 @@ public class Phone {
     private String brand;
     @Column(name = "description")
     private String description;
-    @Column( name = "name")
+    @Column(name = "name")
     private String name;
     @Min(1)
     @Column(name = "price")
