@@ -32,6 +32,7 @@ public class PhoneControllerImpl implements PhoneController {
     @GetMapping("/")
     public String welcomePage() {
         System.out.println();
+        System.out.println();
         return "welcomePage";
     }
 
