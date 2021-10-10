@@ -31,8 +31,10 @@ public class PhoneControllerImpl implements PhoneController {
 //    @Autowired
     @GetMapping("/")
     public String welcomePage() {
+        System.out.println();
         return "welcomePage";
     }
+
 
 
     // get запрос на получение списка книг
